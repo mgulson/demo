@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'home#index'
 
-  resources :users, only: [:index]
+  resources :users, only: [:index, :create]
+
+  resources :polls, only: [:index, :show, :create]
 end
